@@ -1,0 +1,1497 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Proyek Sains Data</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'crawl_twitter';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="crawl_pta.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawl_detiknews.html">
+                        <no title>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawl_pta.html">
+                        <no title>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        <no title>
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawl_detiknews.html">
+                        <no title>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="crawl_pta.html">
+                        <no title>
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        <no title>
+                      </a>
+                    </li>
+                
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://colab.research.google.com/github/Amelia039/prosaindata/blob/gh-pages/_sources/crawl_twitter.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/Amelia039/prosaindata" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/Amelia039/prosaindata/issues/new?title=Issue%20on%20page%20%2Fcrawl_twitter.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="_sources/crawl_twitter.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">100</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span>       <span class="s1">&#39;TBE_EPHEM_CREDS_ADDR&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="n">ephemeral</span> <span class="k">else</span> <span class="n">_os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;TBE_CREDS_ADDR&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">123</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span> 
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/prosaindata
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/prosaindata
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/twintproject/twint.git
+<span class="o">%</span><span class="k">cd</span> twint
+<span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>.<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>twint
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">aiohttp</span><span class="o">==</span><span class="m">3</span>.7.0
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fatal: destination path &#39;twint&#39; already exists and is not an empty directory.
+/content/drive/MyDrive/prosaindata/twint
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Processing /content/drive/MyDrive/prosaindata/twint
+  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 1)) (3.8.4)
+Collecting aiodns
+  Downloading aiodns-3.0.0-py3-none-any.whl (5.0 kB)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 3)) (4.6.3)
+Collecting cchardet
+  Downloading cchardet-2.1.7-cp38-cp38-manylinux2010_x86_64.whl (265 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">266.0/266.0 KB</span> <span class=" -Color -Color-Red">9.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting dataclasses
+  Downloading dataclasses-0.6-py3-none-any.whl (14 kB)
+Collecting elasticsearch
+  Downloading elasticsearch-8.6.2-py3-none-any.whl (385 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">385.4/385.4 KB</span> <span class=" -Color -Color-Red">33.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 7)) (1.7.1)
+Requirement already satisfied: pandas&gt;=0.23.0 in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 8)) (1.3.5)
+Collecting aiohttp_socks&lt;=0.4.1
+  Downloading aiohttp_socks-0.4.1-py3-none-any.whl (17 kB)
+Collecting schedule
+  Downloading schedule-1.1.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
+Collecting fake-useragent
+  Downloading fake_useragent-1.1.1-py3-none-any.whl (50 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">50.4/50.4 KB</span> <span class=" -Color -Color-Red">5.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting googletransx
+  Downloading googletransx-2.4.2.tar.gz (13 kB)
+  Preparing metadata (setup.py) ... ?25l?25hdone
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (4.0.2)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.4)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.1)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (22.2.0)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.3.3)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.2)
+Collecting pycares&gt;=4.0.0
+  Downloading pycares-4.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">289.0/289.0 KB</span> <span class=" -Color -Color-Red">23.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hCollecting elastic-transport&lt;9,&gt;=8
+  Downloading elastic_transport-8.4.0-py3-none-any.whl (59 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">59.5/59.5 KB</span> <span class=" -Color -Color-Red">6.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.7.1)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;-r requirements.txt (line 12)) (5.10.2)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.25.1)
+Collecting urllib3&lt;2,&gt;=1.26.2
+  Downloading urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">140.6/140.6 KB</span> <span class=" -Color -Color-Red">14.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.12.7)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;-r requirements.txt (line 12)) (3.13.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;-r requirements.txt (line 13)) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (2.21)
+Building wheels for collected packages: twint, googletransx
+  Building wheel for twint (setup.py) ... ?25l?25hdone
+  Created wheel for twint: filename=twint-2.1.21-py3-none-any.whl size=38870 sha256=928699d5d3d087f6ced23d4616d521182494775a525a40acef0a4678f2bf0c67
+  Stored in directory: /tmp/pip-ephem-wheel-cache-v00j4r_7/wheels/87/75/39/f8db804e66e5fcd7a7734ee91105d68ed5b68c713c812c13c8
+  Building wheel for googletransx (setup.py) ... ?25l?25hdone
+  Created wheel for googletransx: filename=googletransx-2.4.2-py3-none-any.whl size=15968 sha256=a4aa8aa9e1c6c55f8e9af5bac4f3541512826037436d2af5e60aa79feb503e10
+  Stored in directory: /root/.cache/pip/wheels/6a/54/98/96b62f08dd73eca3147e36b5099d77c3f8fedc5472bb488167
+Successfully built twint googletransx
+Installing collected packages: dataclasses, cchardet, urllib3, schedule, pycares, fake-useragent, elastic-transport, googletransx, elasticsearch, aiohttp_socks, aiodns, twint
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 1.24.3
+    Uninstalling urllib3-1.24.3:
+      Successfully uninstalled urllib3-1.24.3
+Successfully installed aiodns-3.0.0 aiohttp_socks-0.4.1 cchardet-2.1.7 dataclasses-0.6 elastic-transport-8.4.0 elasticsearch-8.6.2 fake-useragent-1.1.1 googletransx-2.4.2 pycares-4.3.0 schedule-1.1.0 twint-2.1.21 urllib3-1.26.14
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: twint in /usr/local/lib/python3.8/dist-packages (2.1.21)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.8.4)
+Requirement already satisfied: aiohttp-socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.4.1)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+Requirement already satisfied: dataclasses in /usr/local/lib/python3.8/dist-packages (from twint) (0.6)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: charset-normalizer&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: frozenlist&gt;=1.1.1 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.3)
+Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (4.0.2)
+Requirement already satisfied: aiosignal&gt;=1.1.2 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.3.1)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests-&gt;googletransx-&gt;twint) (4.0.0)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting aiohttp==3.7.0
+  Downloading aiohttp-3.7.0-cp38-cp38-manylinux2014_x86_64.whl (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.5/1.5 MB</span> <span class=" -Color -Color-Red">29.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (6.0.4)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (22.2.0)
+Collecting chardet&lt;4.0,&gt;=2.0
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">133.4/133.4 KB</span> <span class=" -Color -Color-Red">16.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp==3.7.0) (1.8.2)
+Collecting async-timeout&lt;4.0,&gt;=3.0
+  Downloading async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
+Installing collected packages: chardet, async-timeout, aiohttp
+  Attempting uninstall: chardet
+    Found existing installation: chardet 4.0.0
+    Uninstalling chardet-4.0.0:
+      Successfully uninstalled chardet-4.0.0
+  Attempting uninstall: async-timeout
+    Found existing installation: async-timeout 4.0.2
+    Uninstalling async-timeout-4.0.2:
+      Successfully uninstalled async-timeout-4.0.2
+  Attempting uninstall: aiohttp
+    Found existing installation: aiohttp 3.8.4
+    Uninstalling aiohttp-3.8.4:
+      Successfully uninstalled aiohttp-3.8.4
+Successfully installed aiohttp-3.7.0 async-timeout-3.0.1 chardet-3.0.4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">twint</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: twint in /usr/local/lib/python3.8/dist-packages (2.1.21)
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from twint) (1.3.5)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.8/dist-packages (from twint) (8.6.2)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.1)
+Requirement already satisfied: dataclasses in /usr/local/lib/python3.8/dist-packages (from twint) (0.6)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from twint) (4.6.3)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.8/dist-packages (from twint) (3.0.0)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.8/dist-packages (from twint) (2.1.7)
+Requirement already satisfied: schedule in /usr/local/lib/python3.8/dist-packages (from twint) (1.1.0)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.8/dist-packages (from twint) (2.4.2)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.8/dist-packages (from twint) (1.7.1)
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.8/dist-packages (from twint) (3.7.0)
+Requirement already satisfied: aiohttp-socks in /usr/local/lib/python3.8/dist-packages (from twint) (0.4.1)
+Requirement already satisfied: geopy in /usr/local/lib/python3.8/dist-packages (from twint) (1.17.0)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from aiodns-&gt;twint) (4.3.0)
+Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.4)
+Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (3.0.1)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (22.2.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (6.0.4)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.8/dist-packages (from aiohttp-&gt;twint) (1.8.2)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.8/dist-packages (from elasticsearch-&gt;twint) (8.4.0)
+Requirement already satisfied: importlib-resources&gt;=5.0 in /usr/local/lib/python3.8/dist-packages (from fake-useragent-&gt;twint) (5.10.2)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.8/dist-packages (from geopy-&gt;twint) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.8/dist-packages (from googletransx-&gt;twint) (2.25.1)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (1.21.6)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2022.7.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas-&gt;twint) (2.8.2)
+Requirement already satisfied: certifi in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (2022.12.7)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.8/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;twint) (1.26.14)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.8/dist-packages (from importlib-resources&gt;=5.0-&gt;fake-useragent-&gt;twint) (3.13.0)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (1.15.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.8/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas-&gt;twint) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;twint) (2.10)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;twint) (2.21)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">twint</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>nest_asyncio
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Collecting nest_asyncio
+  Downloading nest_asyncio-1.5.6-py3-none-any.whl (5.2 kB)
+Installing collected packages: nest_asyncio
+Successfully installed nest_asyncio-1.5.6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/prosaindata/twint
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;Ridwan Kamil&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Store_csv</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="c1">#c.Custom[&quot;username&quot;] = [&quot;username&quot;]</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Custom</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+<span class="c1">#c.Custom[&quot;location&quot;] = [&quot;place&quot;]</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Output</span> <span class="o">=</span> <span class="s2">&quot;crawltwitter_ridwankamil.csv&quot;</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1628417662912200711 2023-02-22 15:33:20 +0000 &lt;EnditaTata&gt; Tol yang menghubungkan Kabupaten Batang dengan Semarang, Jawa Tengah itu  merupakan bagian dari Jalan Tol Trans Jawa yang akan menghubungkan Merak, Banten hingga Banyuwangi, Jawa Timur. #BersamaJuara Ridwan Kamil
+1628417660450140161 2023-02-22 15:33:19 +0000 &lt;EnditaTata&gt; Tol Batang-Semarang harus menjalani proses lelang ulang. Bedanya, tol Getaci lelang ulang saat pembangunan konstruksi belum dilakukan. Sedangkan tol Batang-Semarang, lelang ulang dilakukan di tengah jalan karena proyeknya mangkrak atau terbengkalai. #BersamaJuara Ridwan Kamil
+1628417658059395072 2023-02-22 15:33:18 +0000 &lt;EnditaTata&gt; Ternyata tol Getaci bukanlah satu-satunya proyek pembangunan jalan tol yang harus dilakukan lelang ulang. Proyek pembangunan tol Batang-Semarang sepanjang 75 kilometer juga akhirnya bisa berlanjut setelah dilakukan lelang ulang. #BersamaJuara Ridwan Kamil
+1628417655458910208 2023-02-22 15:33:18 +0000 &lt;EnditaTata&gt; Justru menurut Ridwan Kamil, langkah lelang ulang dinilai lebih baik jika ternyata proyek pembangunannya dianggap berisiko mangkrak. Daripada, memaksakan pelaksana yang meragukan atau tidak memenuhi syarat mekanisme lelang. #BersamaJuara Ridwan Kamil
+1628417652388679684 2023-02-22 15:33:17 +0000 &lt;EnditaTata&gt; Sementara itu, Staf Khusus III BUMN Arya Sinulingga mengemukakan bahwa dalam upaya mempercepat proses pembangunan tolol Getaci, tidak hanya perusahaan murni swasta, namun BUMN karya yang sehat juga diperbolehkan ikut  lelang ulang Tol Getaci. #BersamaJuara Ridwan Kamil
+1628417649045807104 2023-02-22 15:33:16 +0000 &lt;EnditaTata&gt; Lelang ulang di proyek tol Getaci bukanlah yang pertama, karena sebelumnya di proyek tol Batang-Semarang yang membentang sejauh 75 kilometer juga pernah mengalami nasib yang sama, setelah pembangunannya mangkrak dalam beberapa tahun. #BersamaJuara Ridwan Kamil
+1628417646424395776 2023-02-22 15:33:16 +0000 &lt;EnditaTata&gt; Proyek tol Getaci yang akan membentang dari Gedebage-Garut-Tasikmalaya-Ciamis-Patimuan-Cilacap tersebut merupakan proyek tol termahal karena menghabiskan anggaran sebesar Rp 56 triliun, dan akan menjadi calon jalan tol terpanjang di Indonesia. #BersamaJuara Ridwan Kamil
+1628417643446435841 2023-02-22 15:33:15 +0000 &lt;EnditaTata&gt; Menurut Ridwan Kamil, proses lelang ulang adalah hal biasa sebagai upaya pemerintah untuk mendapatkan pelaksana yang terbaik dalam pembangunan tol Getaci yang akan membentang sepanjang 206,65 kilometer. #BersamaJuara
+1628417640925663233 2023-02-22 15:33:14 +0000 &lt;EnditaTata&gt; Apalagi Kementerian PUPR sebelumnya menyatakan peserta lelang ulang tol Getaci pada April 2023 akan diperketat dan skema kerjasama dilakukan perubahan dari unsolicited menjadi solicited. #BersamaJuara Ridwan Kamil
+1628417638320971777 2023-02-22 15:33:14 +0000 &lt;EnditaTata&gt; Gubernur Jabar Ridwan Kamil menilai bahwa lelang ulang dalam sebuah proyek konstruksi adalah hal biasa daripada proyek berpotensi mangkrak dan dinilai sebagai upaya pemerintah untuk mendapatkan pelaksana yang terbaik. #BersamaJuara
+1628417635665985537 2023-02-22 15:33:13 +0000 &lt;EnditaTata&gt; LELANG Ulang Proyek Tol Getaci Dinilai Hal Biasa, Ridwan Kamil: Daripada Mangkrak  https://t.co/kIKy4joEav #BersamaJuara
+1628417586445815808 2023-02-22 15:33:01 +0000 &lt;Adolfoj35H&gt; memang tidak mudah #BersamaJuara #RidwanKamil
+1628417432976232450 2023-02-22 15:32:25 +0000 &lt;Ginashiva&gt; 📍 Situ Cihaniwung, Pangalengan @ridwankamil @humasjabar @disparbud_jabar @smilingwestjava  #dijabaraja #smilingwestjava #visitwestjava #jabarjuara #indonesiajuara #wisatabandung #wisatapangalengan #bandungbanget  https://t.co/zKW6QXH3Gz
+1628417399191126016 2023-02-22 15:32:17 +0000 &lt;Adolfoj35H&gt; bener #BersamaJuara #RidwanKamil
+1628416282713559040 2023-02-22 15:27:50 +0000 &lt;heryhidayat1&gt; dulu dikota banjar ketika awal kontestasi bapak diremehkan sama mereka yg justru skrg merasa sejengkal dekat bapak..saya konsisten dri dl pemilih bapak @ridwankamil  lucu tadi siang melihat antusias mereka begitu sok dekat dg bapak..😁😁 sukses terus pak..
+1628415971621998592 2023-02-22 15:26:36 +0000 &lt;Adolfoj35H&gt; iya, rugi banget #BersamaJuara #RidwanKamil
+1628415864843440129 2023-02-22 15:26:11 +0000 &lt;Raffamaesa&gt; Kang Emil berharap Gedung Creative Center Tasikmalaya akan menjadi kawah candradimuka. Tempat lahirnya karya-karya yang luar biasa. Dengan begitu, Kota Tasikmalaya dapat menjadi barometer kreativitas generasi muda. #BersamaJuara Ridwan Kamil
+1628415862515580928 2023-02-22 15:26:10 +0000 &lt;Raffamaesa&gt; Selain itu, terdapat serambi-serambi yang mengelilingi di luar ruang pameran. Sedangkan untuk akses difabel, terdapat lift yang mencapai semua lantai bangunan. #BersamaJuara Ridwan Kamil
+1628415859982217219 2023-02-22 15:26:10 +0000 &lt;Raffamaesa&gt; Pengunjung pun dapat menjelajahi ruang-ruang luar, semi-terbuka, dan ruang dalam. Ruang pameran tidak hanya untuk memamerkan hasil akhir, tetapi juga bagaimana proses kreatif dapat terjadi, sehingga dapat dipergunakan sebagai ruang workshop seni. #BersamaJuara Ridwan Kamil
+1628415857687945216 2023-02-22 15:26:09 +0000 &lt;Raffamaesa&gt; Gedung Creative Center Kota Tasikmalaya mengusung konsep panggung dan anyaman. Gedung Creative Center Kota Tasikmalaya memiliki grand public stairs yang nyaman dan teratapi untuk aktivitas publik, mulai dari bermain musik sampai kuliah terbuka. #BersamaJuara Ridwan Kamil
+1628415854768721922 2023-02-22 15:26:08 +0000 &lt;Raffamaesa&gt; &quot;Kami berharap gedung ini sibuk, penuh dengan pameran, kelas seni, penuh dengan kegiatan-kegiatan yang positif. Karena mengurusi pemuda adalah dibikin sibuk, tapi sibuknya hal-hal positif,&quot; imbuhnya. #BersamaJuara Ridwan Kamil
+1628415852189208578 2023-02-22 15:26:08 +0000 &lt;Raffamaesa&gt; &quot;Gedung ini dibangun, dirintis, oleh tiga wali kota, dari Pak Budiman hingga sekarang Pak Cheka. Alhamdulillah bisa selesai,&quot; kata Kang Emil --sapaan Ridwan Kamil. #BersamaJuara
+1628415849823608833 2023-02-22 15:26:07 +0000 &lt;Raffamaesa&gt; Gubernur Jawa Barat Ridwan Kamil meresmikan Gedung Creative Center (GCC) Kota Tasikmalaya, Selasa (21/2/2023). Ia berharap gedung tersebut dapat menjadi ruang generasi muda berkreasi. #BersamaJuara
+1628415847357378561 2023-02-22 15:26:07 +0000 &lt;Raffamaesa&gt; Resmikan Gedung Creative Center Tasikmalaya, Ridwan Kamil: Ruang Generasi Muda Berkreasi  https://t.co/0mlFuVdEWV #BersamaJuara
+1628415813408681989 2023-02-22 15:25:59 +0000 &lt;DimdimMasdim&gt; Kang Emil berharap Gedung Creative Center Tasikmalaya akan menjadi kawah candradimuka. Tempat lahirnya karya-karya yang luar biasa. Dengan begitu, Kota Tasikmalaya dapat menjadi barometer kreativitas generasi muda. #BersamaJuara Ridwan Kamil
+1628415811147939840 2023-02-22 15:25:58 +0000 &lt;DimdimMasdim&gt; Selain itu, terdapat serambi-serambi yang mengelilingi di luar ruang pameran. Sedangkan untuk akses difabel, terdapat lift yang mencapai semua lantai bangunan. #BersamaJuara Ridwan Kamil
+1628415808719421441 2023-02-22 15:25:57 +0000 &lt;DimdimMasdim&gt; Pengunjung pun dapat menjelajahi ruang-ruang luar, semi-terbuka, dan ruang dalam. Ruang pameran tidak hanya untuk memamerkan hasil akhir, tetapi juga bagaimana proses kreatif dapat terjadi, sehingga dapat dipergunakan sebagai ruang workshop seni. #BersamaJuara Ridwan Kamil
+1628415806341259267 2023-02-22 15:25:57 +0000 &lt;DimdimMasdim&gt; Gedung Creative Center Kota Tasikmalaya mengusung konsep panggung dan anyaman. Gedung Creative Center Kota Tasikmalaya memiliki grand public stairs yang nyaman dan teratapi untuk aktivitas publik, mulai dari bermain musik sampai kuliah terbuka. #BersamaJuara Ridwan Kamil
+1628415803950497793 2023-02-22 15:25:56 +0000 &lt;DimdimMasdim&gt; &quot;Kami berharap gedung ini sibuk, penuh dengan pameran, kelas seni, penuh dengan kegiatan-kegiatan yang positif. Karena mengurusi pemuda adalah dibikin sibuk, tapi sibuknya hal-hal positif,&quot; imbuhnya. #BersamaJuara Ridwan Kamil
+1628415801559744512 2023-02-22 15:25:56 +0000 &lt;DimdimMasdim&gt; &quot;Gedung ini dibangun, dirintis, oleh tiga wali kota, dari Pak Budiman hingga sekarang Pak Cheka. Alhamdulillah bisa selesai,&quot; kata Kang Emil --sapaan Ridwan Kamil. #BersamaJuara
+1628415799299051520 2023-02-22 15:25:55 +0000 &lt;DimdimMasdim&gt; Gubernur Jawa Barat Ridwan Kamil meresmikan Gedung Creative Center (GCC) Kota Tasikmalaya, Selasa (21/2/2023). Ia berharap gedung tersebut dapat menjadi ruang generasi muda berkreasi. #BersamaJuara
+1628415796769857537 2023-02-22 15:25:55 +0000 &lt;DimdimMasdim&gt; Resmikan Gedung Creative Center Tasikmalaya, Ridwan Kamil: Ruang Generasi Muda Berkreasi  https://t.co/YSoR5oPz0w #BersamaJuara
+1628415761634172930 2023-02-22 15:25:46 +0000 &lt;putriikiraanna&gt; Kang Emil berharap Gedung Creative Center Tasikmalaya akan menjadi kawah candradimuka. Tempat lahirnya karya-karya yang luar biasa. Dengan begitu, Kota Tasikmalaya dapat menjadi barometer kreativitas generasi muda. #BersamaJuara Ridwan Kamil
+1628415759289585665 2023-02-22 15:25:46 +0000 &lt;putriikiraanna&gt; Selain itu, terdapat serambi-serambi yang mengelilingi di luar ruang pameran. Sedangkan untuk akses difabel, terdapat lift yang mencapai semua lantai bangunan. #BersamaJuara Ridwan Kamil
+1628415756328407040 2023-02-22 15:25:45 +0000 &lt;putriikiraanna&gt; Pengunjung pun dapat menjelajahi ruang-ruang luar, semi-terbuka, dan ruang dalam. Ruang pameran tidak hanya untuk memamerkan hasil akhir, tetapi juga bagaimana proses kreatif dapat terjadi, sehingga dapat dipergunakan sebagai ruang workshop seni. #BersamaJuara Ridwan Kamil
+1628415753983774721 2023-02-22 15:25:44 +0000 &lt;putriikiraanna&gt; Gedung Creative Center Kota Tasikmalaya mengusung konsep panggung dan anyaman. Gedung Creative Center Kota Tasikmalaya memiliki grand public stairs yang nyaman dan teratapi untuk aktivitas publik, mulai dari bermain musik sampai kuliah terbuka. #BersamaJuara Ridwan Kamil
+1628415751207149569 2023-02-22 15:25:44 +0000 &lt;putriikiraanna&gt; &quot;Kami berharap gedung ini sibuk, penuh dengan pameran, kelas seni, penuh dengan kegiatan-kegiatan yang positif. Karena mengurusi pemuda adalah dibikin sibuk, tapi sibuknya hal-hal positif,&quot; imbuhnya. #BersamaJuara Ridwan Kamil
+1628415748539547648 2023-02-22 15:25:43 +0000 &lt;putriikiraanna&gt; &quot;Gedung ini dibangun, dirintis, oleh tiga wali kota, dari Pak Budiman hingga sekarang Pak Cheka. Alhamdulillah bisa selesai,&quot; kata Kang Emil --sapaan Ridwan Kamil. #BersamaJuara
+1628415746211708929 2023-02-22 15:25:43 +0000 &lt;putriikiraanna&gt; Gubernur Jawa Barat Ridwan Kamil meresmikan Gedung Creative Center (GCC) Kota Tasikmalaya, Selasa (21/2/2023). Ia berharap gedung tersebut dapat menjadi ruang generasi muda berkreasi. #BersamaJuara
+1628415743665782785 2023-02-22 15:25:42 +0000 &lt;putriikiraanna&gt; Resmikan Gedung Creative Center Tasikmalaya, Ridwan Kamil: Ruang Generasi Muda Berkreasi  https://t.co/2NiaYu52UH #BersamaJuara
+1628415643690364928 2023-02-22 15:25:18 +0000 &lt;BambangDewangga&gt; Kang Emil berharap Gedung Creative Center Tasikmalaya akan menjadi kawah candradimuka. Tempat lahirnya karya-karya yang luar biasa. Dengan begitu, Kota Tasikmalaya dapat menjadi barometer kreativitas generasi muda. #BersamaJuara Ridwan Kamil
+1628415641333153792 2023-02-22 15:25:18 +0000 &lt;BambangDewangga&gt; Selain itu, terdapat serambi-serambi yang mengelilingi di luar ruang pameran. Sedangkan untuk akses difabel, terdapat lift yang mencapai semua lantai bangunan. #BersamaJuara Ridwan Kamil
+1628415638741082113 2023-02-22 15:25:17 +0000 &lt;BambangDewangga&gt; Pengunjung pun dapat menjelajahi ruang-ruang luar, semi-terbuka, dan ruang dalam. Ruang pameran tidak hanya untuk memamerkan hasil akhir, tetapi juga bagaimana proses kreatif dapat terjadi, sehingga dapat dipergunakan sebagai ruang workshop seni. #BersamaJuara Ridwan Kamil
+1628415636434198529 2023-02-22 15:25:16 +0000 &lt;BambangDewangga&gt; Gedung Creative Center Kota Tasikmalaya mengusung konsep panggung dan anyaman. Gedung Creative Center Kota Tasikmalaya memiliki grand public stairs yang nyaman dan teratapi untuk aktivitas publik, mulai dari bermain musik sampai kuliah terbuka. #BersamaJuara Ridwan Kamil
+1628415633166856193 2023-02-22 15:25:16 +0000 &lt;BambangDewangga&gt; &quot;Kami berharap gedung ini sibuk, penuh dengan pameran, kelas seni, penuh dengan kegiatan-kegiatan yang positif. Karena mengurusi pemuda adalah dibikin sibuk, tapi sibuknya hal-hal positif,&quot; imbuhnya. #BersamaJuara Ridwan Kamil
+1628415630809640960 2023-02-22 15:25:15 +0000 &lt;BambangDewangga&gt; &quot;Gedung ini dibangun, dirintis, oleh tiga wali kota, dari Pak Budiman hingga sekarang Pak Cheka. Alhamdulillah bisa selesai,&quot; kata Kang Emil --sapaan Ridwan Kamil. #BersamaJuara
+1628415628402098176 2023-02-22 15:25:14 +0000 &lt;BambangDewangga&gt; Gubernur Jawa Barat Ridwan Kamil meresmikan Gedung Creative Center (GCC) Kota Tasikmalaya, Selasa (21/2/2023). Ia berharap gedung tersebut dapat menjadi ruang generasi muda berkreasi. #BersamaJuara
+1628415625872953346 2023-02-22 15:25:14 +0000 &lt;BambangDewangga&gt; Resmikan Gedung Creative Center Tasikmalaya, Ridwan Kamil: Ruang Generasi Muda Berkreasi  https://t.co/xUMky4rHmq #BersamaJuara
+1628415572072595456 2023-02-22 15:25:01 +0000 &lt;EnditaTata&gt; Kang Emil berharap Gedung Creative Center Tasikmalaya akan menjadi kawah candradimuka. Tempat lahirnya karya-karya yang luar biasa. Dengan begitu, Kota Tasikmalaya dapat menjadi barometer kreativitas generasi muda. #BersamaJuara Ridwan Kamil
+1628415569866395648 2023-02-22 15:25:01 +0000 &lt;EnditaTata&gt; Selain itu, terdapat serambi-serambi yang mengelilingi di luar ruang pameran. Sedangkan untuk akses difabel, terdapat lift yang mencapai semua lantai bangunan. #BersamaJuara Ridwan Kamil
+1628415567525974017 2023-02-22 15:25:00 +0000 &lt;EnditaTata&gt; Pengunjung pun dapat menjelajahi ruang-ruang luar, semi-terbuka, dan ruang dalam. Ruang pameran tidak hanya untuk memamerkan hasil akhir, tetapi juga bagaimana proses kreatif dapat terjadi, sehingga dapat dipergunakan sebagai ruang workshop seni. #BersamaJuara Ridwan Kamil
+1628415565093298177 2023-02-22 15:24:59 +0000 &lt;EnditaTata&gt; Gedung Creative Center Kota Tasikmalaya mengusung konsep panggung dan anyaman. Gedung Creative Center Kota Tasikmalaya memiliki grand public stairs yang nyaman dan teratapi untuk aktivitas publik, mulai dari bermain musik sampai kuliah terbuka. #BersamaJuara Ridwan Kamil
+1628415562748690432 2023-02-22 15:24:59 +0000 &lt;EnditaTata&gt; &quot;Kami berharap gedung ini sibuk, penuh dengan pameran, kelas seni, penuh dengan kegiatan-kegiatan yang positif. Karena mengurusi pemuda adalah dibikin sibuk, tapi sibuknya hal-hal positif,&quot; imbuhnya. #BersamaJuara Ridwan Kamil
+1628415560416628736 2023-02-22 15:24:58 +0000 &lt;EnditaTata&gt; &quot;Gedung ini dibangun, dirintis, oleh tiga wali kota, dari Pak Budiman hingga sekarang Pak Cheka. Alhamdulillah bisa selesai,&quot; kata Kang Emil --sapaan Ridwan Kamil. #BersamaJuara
+1628415558122360832 2023-02-22 15:24:58 +0000 &lt;EnditaTata&gt; Gubernur Jawa Barat Ridwan Kamil meresmikan Gedung Creative Center (GCC) Kota Tasikmalaya, Selasa (21/2/2023). Ia berharap gedung tersebut dapat menjadi ruang generasi muda berkreasi. #BersamaJuara
+1628415555668688902 2023-02-22 15:24:57 +0000 &lt;EnditaTata&gt; Resmikan Gedung Creative Center Tasikmalaya, Ridwan Kamil: Ruang Generasi Muda Berkreasi  https://t.co/PYFgXK605x #BersamaJuara
+1628415518628618245 2023-02-22 15:24:48 +0000 &lt;RK24Official&gt; Bertemu Gubernur Jabar Ridwan Kamil, Ini Jawaban Bupati Indramayu - by @rk_2024 #RelawanKebangsaan24   https://t.co/yPTC8FCNpx
+1628415038011867137 2023-02-22 15:22:54 +0000 &lt;Raffamaesa&gt; &quot;Kita harus bangga dan bersyukur dengan tanah Pasundan,&quot; pungkasnya. #BersamaJuara Ridwan Kamil
+1628415035663060992 2023-02-22 15:22:53 +0000 &lt;Raffamaesa&gt; &quot;Jadi sebenarnya tatar Pasundan sudah senikmat-nikmatnya wilayah. Alamnya indah, orangnya someah ,&quot; ucap Kang Emil sapaan akrab Ridwan Kamil. #BersamaJuara Ridwan Kamil
+1628415033490432001 2023-02-22 15:22:53 +0000 &lt;Raffamaesa&gt; Apalagi di tatar Pasundan disuguhkan dengan  alam yang indah dan warga Jabar terkenal ramah ketika menghadapi setiap kebijakan. #BersamaJuara Ridwan Kamil
+1628415031326183424 2023-02-22 15:22:52 +0000 &lt;Raffamaesa&gt; Gubernur Ridwan Kamil meyakini, pesta demokrasi di Jabar akan berjalan aman. Hal itu berdasar dari ciri khas orang Sunda yang senantiasa mengedepankan musyawarah mufakat dalam setiap mengambil keputusan. #BersamaJuara Ridwan Kamil
+1628415029178675202 2023-02-22 15:22:52 +0000 &lt;Raffamaesa&gt; Gubernur Jawa Barat Ridwan Kamil melakukan pertemuan dengan ulama dan tokoh masyarakat Kota Banjar di Pendopo Kota Banjar. Ridwan Kamil menyampaikan pesan agar situasi dan kondisi di Kota Banjar menjelang pilkada serentak 2024 berjalan dengan aman dan kondusif. #BersamaJuara
+1628415026976653313 2023-02-22 15:22:51 +0000 &lt;Raffamaesa&gt; Gubernur Ridwan Kamil Ajak Ulama dan Tokoh Masyarakat Kota Banjar Jaga Kondusivitas di Tahun Politik  https://t.co/xphNffwmJn #BersamaJuara
+1628414989278277637 2023-02-22 15:22:42 +0000 &lt;DimdimMasdim&gt; &quot;Kita harus bangga dan bersyukur dengan tanah Pasundan,&quot; pungkasnya. #BersamaJuara Ridwan Kamil
+1628414987051110400 2023-02-22 15:22:42 +0000 &lt;DimdimMasdim&gt; &quot;Jadi sebenarnya tatar Pasundan sudah senikmat-nikmatnya wilayah. Alamnya indah, orangnya someah ,&quot; ucap Kang Emil sapaan akrab Ridwan Kamil. #BersamaJuara Ridwan Kamil
+1628414984731660288 2023-02-22 15:22:41 +0000 &lt;DimdimMasdim&gt; Apalagi di tatar Pasundan disuguhkan dengan  alam yang indah dan warga Jabar terkenal ramah ketika menghadapi setiap kebijakan. #BersamaJuara Ridwan Kamil
+1628414982512857088 2023-02-22 15:22:40 +0000 &lt;DimdimMasdim&gt; Gubernur Ridwan Kamil meyakini, pesta demokrasi di Jabar akan berjalan aman. Hal itu berdasar dari ciri khas orang Sunda yang senantiasa mengedepankan musyawarah mufakat dalam setiap mengambil keputusan. #BersamaJuara Ridwan Kamil
+1628414980239552513 2023-02-22 15:22:40 +0000 &lt;DimdimMasdim&gt; Gubernur Jawa Barat Ridwan Kamil melakukan pertemuan dengan ulama dan tokoh masyarakat Kota Banjar di Pendopo Kota Banjar. Ridwan Kamil menyampaikan pesan agar situasi dan kondisi di Kota Banjar menjelang pilkada serentak 2024 berjalan dengan aman dan kondusif. #BersamaJuara
+1628414977886535680 2023-02-22 15:22:39 +0000 &lt;DimdimMasdim&gt; Gubernur Ridwan Kamil Ajak Ulama dan Tokoh Masyarakat Kota Banjar Jaga Kondusivitas di Tahun Politik  https://t.co/5MzG3crLKU #BersamaJuara
+1628414944151732224 2023-02-22 15:22:31 +0000 &lt;putriikiraanna&gt; &quot;Kita harus bangga dan bersyukur dengan tanah Pasundan,&quot; pungkasnya. #BersamaJuara Ridwan Kamil
+1628414941656129536 2023-02-22 15:22:31 +0000 &lt;putriikiraanna&gt; &quot;Jadi sebenarnya tatar Pasundan sudah senikmat-nikmatnya wilayah. Alamnya indah, orangnya someah ,&quot; ucap Kang Emil sapaan akrab Ridwan Kamil. #BersamaJuara Ridwan Kamil
+1628414939173097475 2023-02-22 15:22:30 +0000 &lt;putriikiraanna&gt; Apalagi di tatar Pasundan disuguhkan dengan  alam yang indah dan warga Jabar terkenal ramah ketika menghadapi setiap kebijakan. #BersamaJuara Ridwan Kamil
+1628414937092747264 2023-02-22 15:22:30 +0000 &lt;putriikiraanna&gt; Gubernur Ridwan Kamil meyakini, pesta demokrasi di Jabar akan berjalan aman. Hal itu berdasar dari ciri khas orang Sunda yang senantiasa mengedepankan musyawarah mufakat dalam setiap mengambil keputusan. #BersamaJuara Ridwan Kamil
+1628414935003967489 2023-02-22 15:22:29 +0000 &lt;putriikiraanna&gt; Gubernur Jawa Barat Ridwan Kamil melakukan pertemuan dengan ulama dan tokoh masyarakat Kota Banjar di Pendopo Kota Banjar. Ridwan Kamil menyampaikan pesan agar situasi dan kondisi di Kota Banjar menjelang pilkada serentak 2024 berjalan dengan aman dan kondusif. #BersamaJuara
+1628414932743233536 2023-02-22 15:22:29 +0000 &lt;putriikiraanna&gt; Gubernur Ridwan Kamil Ajak Ulama dan Tokoh Masyarakat Kota Banjar Jaga Kondusivitas di Tahun Politik  https://t.co/SberobeiT0 #BersamaJuara
+1628414894214356993 2023-02-22 15:22:19 +0000 &lt;BambangDewangga&gt; &quot;Kita harus bangga dan bersyukur dengan tanah Pasundan,&quot; pungkasnya. #BersamaJuara Ridwan Kamil
+1628414892092067840 2023-02-22 15:22:19 +0000 &lt;BambangDewangga&gt; &quot;Jadi sebenarnya tatar Pasundan sudah senikmat-nikmatnya wilayah. Alamnya indah, orangnya someah ,&quot; ucap Kang Emil sapaan akrab Ridwan Kamil. #BersamaJuara Ridwan Kamil
+1628414889961361409 2023-02-22 15:22:18 +0000 &lt;BambangDewangga&gt; Apalagi di tatar Pasundan disuguhkan dengan  alam yang indah dan warga Jabar terkenal ramah ketika menghadapi setiap kebijakan. #BersamaJuara Ridwan Kamil
+1628414887843201024 2023-02-22 15:22:18 +0000 &lt;BambangDewangga&gt; Gubernur Ridwan Kamil meyakini, pesta demokrasi di Jabar akan berjalan aman. Hal itu berdasar dari ciri khas orang Sunda yang senantiasa mengedepankan musyawarah mufakat dalam setiap mengambil keputusan. #BersamaJuara Ridwan Kamil
+1628414885616025600 2023-02-22 15:22:17 +0000 &lt;BambangDewangga&gt; Gubernur Jawa Barat Ridwan Kamil melakukan pertemuan dengan ulama dan tokoh masyarakat Kota Banjar di Pendopo Kota Banjar. Ridwan Kamil menyampaikan pesan agar situasi dan kondisi di Kota Banjar menjelang pilkada serentak 2024 berjalan dengan aman dan kondusif. #BersamaJuara
+1628414883103649796 2023-02-22 15:22:17 +0000 &lt;BambangDewangga&gt; Gubernur Ridwan Kamil Ajak Ulama dan Tokoh Masyarakat Kota Banjar Jaga Kondusivitas di Tahun Politik  https://t.co/mREDA2VzDR #BersamaJuara
+1628414830486114306 2023-02-22 15:22:04 +0000 &lt;EnditaTata&gt; &quot;Kita harus bangga dan bersyukur dengan tanah Pasundan,&quot; pungkasnya. #BersamaJuara Ridwan Kamil
+1628414828225380352 2023-02-22 15:22:04 +0000 &lt;EnditaTata&gt; &quot;Jadi sebenarnya tatar Pasundan sudah senikmat-nikmatnya wilayah. Alamnya indah, orangnya someah ,&quot; ucap Kang Emil sapaan akrab Ridwan Kamil. #BersamaJuara Ridwan Kamil
+1628414825994031104 2023-02-22 15:22:03 +0000 &lt;EnditaTata&gt; Apalagi di tatar Pasundan disuguhkan dengan  alam yang indah dan warga Jabar terkenal ramah ketika menghadapi setiap kebijakan. #BersamaJuara Ridwan Kamil
+1628414823443877888 2023-02-22 15:22:03 +0000 &lt;EnditaTata&gt; Gubernur Ridwan Kamil meyakini, pesta demokrasi di Jabar akan berjalan aman. Hal itu berdasar dari ciri khas orang Sunda yang senantiasa mengedepankan musyawarah mufakat dalam setiap mengambil keputusan. #BersamaJuara Ridwan Kamil
+1628414820528652288 2023-02-22 15:22:02 +0000 &lt;EnditaTata&gt; Gubernur Jawa Barat Ridwan Kamil melakukan pertemuan dengan ulama dan tokoh masyarakat Kota Banjar di Pendopo Kota Banjar. Ridwan Kamil menyampaikan pesan agar situasi dan kondisi di Kota Banjar menjelang pilkada serentak 2024 berjalan dengan aman dan kondusif. #BersamaJuara
+1628414816594595840 2023-02-22 15:22:01 +0000 &lt;EnditaTata&gt; Gubernur Ridwan Kamil Ajak Ulama dan Tokoh Masyarakat Kota Banjar Jaga Kondusivitas di Tahun Politik  https://t.co/qJnOxHqfok #BersamaJuara
+1628414723229208578 2023-02-22 15:21:39 +0000 &lt;KingPin2024&gt; @Mdy_Asmara1701 harusnya Ridwan Kamil, jadi nilai tawar supaya Golkar ikut ke koalisi perubahan ( dan juga kawan2ny - PAN PPP)
+1628414715402813440 2023-02-22 15:21:37 +0000 &lt;MuslanBachmid&gt; Dari Timur Indonesia Kami Mendukung Prof YIM maju sebagai Capres atau Cawapres di tahun 2024   @Yusrilihza_Mhd  @jokowi  @puanmaharani_ri  @mohmahfudmd  @PDI_Perjuangan  @OfficialDPP_PBB  @airlangga_hrt  @ridwankamil  @ListyoSigitP  https://t.co/GAOi18ABf3
+1628414506002161664 2023-02-22 15:20:47 +0000 &lt;Raffamaesa&gt; Pemilih Prabowo S. : Tidak tahu: 21,6% ; Ganjar Pranowo: 19,7% ; Anies B. : 19,3% ; Ridwan Kamil: 14,2% ; AHY : 8,4% ; Sandiaga S. Uno: 8,4% ; Tokoh lainnya: 4,6% ; Andika Perkasa: 2,8% ; Erick Thohir: 2,3% ; Tri Rismaharini: 1,8% ; Puan Maharani: 0,9%. #BersamaJuara
+1628414503712092160 2023-02-22 15:20:46 +0000 &lt;Raffamaesa&gt; Pemilih Ganjar Pranowo : Tidak Tahu: 30,2% ; Prabowo Subianto: 21,1% ; Ridwan Kamil: 14,8% ; Anies : 7,6% ; Tokoh lainnya: 7,2% ; Erick Thohir: 5,6% ; Tri Rismaharini: 4,9% ; Puan Maharani: 3% ; Sandiaga S. Uno: 2,3% ;  Andika Perkasa: 2% ; Agus Harimurti Y. : 1,3%. #BersamaJuara
+1628414501627494400 2023-02-22 15:20:46 +0000 &lt;Raffamaesa&gt; Sandiaga Salahuddin Uno: 8,2% ; Tokoh lainnya: 5,1% ; Andika Perkasa: 2,5% ; Puan Maharani: 2,5% ; Erick Thohir: 0,6% ; Tri Rismaharini: 0%. #BersamaJuara Ridwan Kamil
+1628414499358375938 2023-02-22 15:20:45 +0000 &lt;Raffamaesa&gt; Litbang Kompas juga merilis survei skema capres alternatif berdasarkan pemilih Anies, Ganjar dan Prabowo (Januari 2023). Pemilih Anies Baswedan : Tidak Tahu: 24,7% ; Prabowo Subianto: 17,7% ; Ridwan Kamil: 16,5% ; Ganjar Pranowo: 13,3% ; Agus Harimurti Y. : 8,9% #BersamaJuara
+1628414497114431488 2023-02-22 15:20:45 +0000 &lt;Raffamaesa&gt; Puan Maharani: 1,5% ; Airlangga Hartarto: 0,8% ; Mahfud Md: 0,7% ; Hary Tanoesoedibyo: 0,5% ; Khofifah Indar Parawansa: 0,5% ; Surya Paloh: 0,5% ; Basuki Tjahaja Purnama: 0,5% ; Lainnya: 2,2% ; Tidak Tahu/tidak jawab: 45,9%. #BersamaJuara Ridwan Kamil
+1628414494484631553 2023-02-22 15:20:44 +0000 &lt;Raffamaesa&gt; Berikut elektabilitas capres alternatif selain Anies, Ganjar dan Prabowo, periode survei Litbang Kompas Januari 2023: Ridwan Kamil: 22,7% ; Sandiaga Salahuddin Uno: 7,3% ; Agus Harimurti Y. : 5,8 % ; Erick Thohir: 4,5% ; Tri Rismaharini: 4,3% ; Andika Perkasa: 2,3%. #BersamaJuara
+1628414492274229250 2023-02-22 15:20:44 +0000 &lt;Raffamaesa&gt; Selain itu, melejitnya sosok Ridwan Kamil sebagai capres alternatif juga sesuai dengan keberhasilannya mempertahankan elektabilitas pada posisi keempat yang terus membayangi tiga capres potensial teratas. #BersamaJuara Ridwan Kamil
+1628414489971535872 2023-02-22 15:20:43 +0000 &lt;Raffamaesa&gt; Ridwan Kamil disebut mendapatkan peralihan dukungan yang cukup besar dari pendukung Anies, Ganjar, maupun Prabowo dalam skema keterpilihannya sebagai figur alternatif. #BersamaJuara Ridwan Kamil
+1628414487593365505 2023-02-22 15:20:42 +0000 &lt;Raffamaesa&gt; Ridwan Kamil berada di posisi puncak sosok capres alternatif, meraih tingkat keterpilihan 22,7 persen dan terpaut jauh dibandingkan dengan tokoh capres alternatif lainnya. Posisi kedua ditempati Sandiaga dengan elektabilitas 7,3% dan Agus Harimurti Yudhoyono 5,8%. #BersamaJuara
+1628414484930007040 2023-02-22 15:20:42 +0000 &lt;Raffamaesa&gt; Beberapa nama yang muncul di antaranya Gubernur Jawa Barat Ridwan Kamil, Menparekraf Sandiaga Salahuddin Uno, Ketua Umum Partai Demokrat Agus Harimurti Yudhoyono, Menteri BUMN Erick Thohir hingga Menteri Sosial Tri Rismaharini. #BersamaJuara Ridwan Kamil
+1628414482140794881 2023-02-22 15:20:41 +0000 &lt;Raffamaesa&gt; Dalam survei Litbang Kompas pada periode Januari 2023, tiga tokoh menguasai papan elektabilitas calon presiden yaitu Ganjar Pranowo, Prabowo Subianto dan Anies Baswedan. Di sisi lain, muncul sederet figur lain yang dinilai layak didukung menjadi capres. #BersamaJuara Ridwan Kamil
+1628414479787765761 2023-02-22 15:20:41 +0000 &lt;Raffamaesa&gt; Tingkat kepercayaan survei menggunakan metode ini mencapai 95 persen dengan margin of error penelitian +- 2,83 persen dalam kondisi penarikan sampel acak sederhana. Meskipun demikian, kesalahan di luar pemilihan sampel dimungkinkan terjadi. #BersamaJuara Ridwan Kamil
+1628414475136294913 2023-02-22 15:20:40 +0000 &lt;Raffamaesa&gt; Litbang Kompas merilis hasil survei tentang calon presiden (capres) alternatif selain Anies Baswedan, Ganjar Pranowo dan Prabowo Subianto. Gubernur Jawa Barat Ridwan Kamil unggul dominan di survei figur capres alternatif. #BersamaJuara
+1628414472766492672 2023-02-22 15:20:39 +0000 &lt;Raffamaesa&gt; Survei Litbang Kompas: Ridwan Kamil Dominan di Figur Capres Alternatif  https://t.co/0PNRP1Srrj #BersamaJuara
+1628414431486173184 2023-02-22 15:20:29 +0000 &lt;DimdimMasdim&gt; Pemilih Prabowo S. : Tidak tahu: 21,6% ; Ganjar Pranowo: 19,7% ; Anies B. : 19,3% ; Ridwan Kamil: 14,2% ; AHY : 8,4% ; Sandiaga S. Uno: 8,4% ; Tokoh lainnya: 4,6% ; Andika Perkasa: 2,8% ; Erick Thohir: 2,3% ; Tri Rismaharini: 1,8% ; Puan Maharani: 0,9%. #BersamaJuara
+1628414429061877761 2023-02-22 15:20:29 +0000 &lt;DimdimMasdim&gt; Pemilih Ganjar Pranowo : Tidak Tahu: 30,2% ; Prabowo Subianto: 21,1% ; Ridwan Kamil: 14,8% ; Anies : 7,6% ; Tokoh lainnya: 7,2% ; Erick Thohir: 5,6% ; Tri Rismaharini: 4,9% ; Puan Maharani: 3% ; Sandiaga S. Uno: 2,3% ;  Andika Perkasa: 2% ; Agus Harimurti Y. : 1,3%. #BersamaJuara
+1628414426700464130 2023-02-22 15:20:28 +0000 &lt;DimdimMasdim&gt; Sandiaga Salahuddin Uno: 8,2% ; Tokoh lainnya: 5,1% ; Andika Perkasa: 2,5% ; Puan Maharani: 2,5% ; Erick Thohir: 0,6% ; Tri Rismaharini: 0%. #BersamaJuara Ridwan Kamil
+1628414424422965251 2023-02-22 15:20:27 +0000 &lt;DimdimMasdim&gt; Litbang Kompas juga merilis survei skema capres alternatif berdasarkan pemilih Anies, Ganjar dan Prabowo (Januari 2023). Pemilih Anies Baswedan : Tidak Tahu: 24,7% ; Prabowo Subianto: 17,7% ; Ridwan Kamil: 16,5% ; Ganjar Pranowo: 13,3% ; Agus Harimurti Y. : 8,9% #BersamaJuara
+1628414422124466179 2023-02-22 15:20:27 +0000 &lt;DimdimMasdim&gt; Puan Maharani: 1,5% ; Airlangga Hartarto: 0,8% ; Mahfud Md: 0,7% ; Hary Tanoesoedibyo: 0,5% ; Khofifah Indar Parawansa: 0,5% ; Surya Paloh: 0,5% ; Basuki Tjahaja Purnama: 0,5% ; Lainnya: 2,2% ; Tidak Tahu/tidak jawab: 45,9%. #BersamaJuara Ridwan Kamil
+1628414419771494401 2023-02-22 15:20:26 +0000 &lt;DimdimMasdim&gt; Berikut elektabilitas capres alternatif selain Anies, Ganjar dan Prabowo, periode survei Litbang Kompas Januari 2023: Ridwan Kamil: 22,7% ; Sandiaga Salahuddin Uno: 7,3% ; Agus Harimurti Y. : 5,8 % ; Erick Thohir: 4,5% ; Tri Rismaharini: 4,3% ; Andika Perkasa: 2,3%. #BersamaJuara
+1628414417028399104 2023-02-22 15:20:26 +0000 &lt;DimdimMasdim&gt; Selain itu, melejitnya sosok Ridwan Kamil sebagai capres alternatif juga sesuai dengan keberhasilannya mempertahankan elektabilitas pada posisi keempat yang terus membayangi tiga capres potensial teratas. #BersamaJuara Ridwan Kamil
+1628414414788661248 2023-02-22 15:20:25 +0000 &lt;DimdimMasdim&gt; Ridwan Kamil disebut mendapatkan peralihan dukungan yang cukup besar dari pendukung Anies, Ganjar, maupun Prabowo dalam skema keterpilihannya sebagai figur alternatif. #BersamaJuara Ridwan Kamil
+1628414412456599552 2023-02-22 15:20:25 +0000 &lt;DimdimMasdim&gt; Ridwan Kamil berada di posisi puncak sosok capres alternatif, meraih tingkat keterpilihan 22,7 persen dan terpaut jauh dibandingkan dengan tokoh capres alternatif lainnya. Posisi kedua ditempati Sandiaga dengan elektabilitas 7,3% dan Agus Harimurti Yudhoyono 5,8%. #BersamaJuara
+1628414410124566528 2023-02-22 15:20:24 +0000 &lt;DimdimMasdim&gt; Beberapa nama yang muncul di antaranya Gubernur Jawa Barat Ridwan Kamil, Menparekraf Sandiaga Salahuddin Uno, Ketua Umum Partai Demokrat Agus Harimurti Yudhoyono, Menteri BUMN Erick Thohir hingga Menteri Sosial Tri Rismaharini. #BersamaJuara Ridwan Kamil
+1628414407788347394 2023-02-22 15:20:23 +0000 &lt;DimdimMasdim&gt; Dalam survei Litbang Kompas pada periode Januari 2023, tiga tokoh menguasai papan elektabilitas calon presiden yaitu Ganjar Pranowo, Prabowo Subianto dan Anies Baswedan. Di sisi lain, muncul sederet figur lain yang dinilai layak didukung menjadi capres. #BersamaJuara Ridwan Kamil
+1628414405577936898 2023-02-22 15:20:23 +0000 &lt;DimdimMasdim&gt; Tingkat kepercayaan survei menggunakan metode ini mencapai 95 persen dengan margin of error penelitian +- 2,83 persen dalam kondisi penarikan sampel acak sederhana. Meskipun demikian, kesalahan di luar pemilihan sampel dimungkinkan terjadi. #BersamaJuara Ridwan Kamil
+1628414400926457857 2023-02-22 15:20:22 +0000 &lt;DimdimMasdim&gt; Litbang Kompas merilis hasil survei tentang calon presiden (capres) alternatif selain Anies Baswedan, Ganjar Pranowo dan Prabowo Subianto. Gubernur Jawa Barat Ridwan Kamil unggul dominan di survei figur capres alternatif. #BersamaJuara
+1628414398552498176 2023-02-22 15:20:21 +0000 &lt;DimdimMasdim&gt; Survei Litbang Kompas: Ridwan Kamil Dominan di Figur Capres Alternatif  https://t.co/NyUSR3HDLw #BersamaJuara
+1628414361445478400 2023-02-22 15:20:12 +0000 &lt;putriikiraanna&gt; Pemilih Prabowo S. : Tidak tahu: 21,6% ; Ganjar Pranowo: 19,7% ; Anies B. : 19,3% ; Ridwan Kamil: 14,2% ; AHY : 8,4% ; Sandiaga S. Uno: 8,4% ; Tokoh lainnya: 4,6% ; Andika Perkasa: 2,8% ; Erick Thohir: 2,3% ; Tri Rismaharini: 1,8% ; Puan Maharani: 0,9%. #BersamaJuara
+1628414359121821701 2023-02-22 15:20:12 +0000 &lt;putriikiraanna&gt; Pemilih Ganjar Pranowo : Tidak Tahu: 30,2% ; Prabowo Subianto: 21,1% ; Ridwan Kamil: 14,8% ; Anies : 7,6% ; Tokoh lainnya: 7,2% ; Erick Thohir: 5,6% ; Tri Rismaharini: 4,9% ; Puan Maharani: 3% ; Sandiaga S. Uno: 2,3% ;  Andika Perkasa: 2% ; Agus Harimurti Y. : 1,3%. #BersamaJuara
+1628414356919840769 2023-02-22 15:20:11 +0000 &lt;putriikiraanna&gt; Sandiaga Salahuddin Uno: 8,2% ; Tokoh lainnya: 5,1% ; Andika Perkasa: 2,5% ; Puan Maharani: 2,5% ; Erick Thohir: 0,6% ; Tri Rismaharini: 0%. #BersamaJuara Ridwan Kamil
+1628414354726223872 2023-02-22 15:20:11 +0000 &lt;putriikiraanna&gt; Litbang Kompas juga merilis survei skema capres alternatif berdasarkan pemilih Anies, Ganjar dan Prabowo (Januari 2023). Pemilih Anies Baswedan : Tidak Tahu: 24,7% ; Prabowo Subianto: 17,7% ; Ridwan Kamil: 16,5% ; Ganjar Pranowo: 13,3% ; Agus Harimurti Y. : 8,9% #BersamaJuara
+1628414352515809281 2023-02-22 15:20:10 +0000 &lt;putriikiraanna&gt; Puan Maharani: 1,5% ; Airlangga Hartarto: 0,8% ; Mahfud Md: 0,7% ; Hary Tanoesoedibyo: 0,5% ; Khofifah Indar Parawansa: 0,5% ; Surya Paloh: 0,5% ; Basuki Tjahaja Purnama: 0,5% ; Lainnya: 2,2% ; Tidak Tahu/tidak jawab: 45,9%. #BersamaJuara Ridwan Kamil
+1628414350313803777 2023-02-22 15:20:10 +0000 &lt;putriikiraanna&gt; Berikut elektabilitas capres alternatif selain Anies, Ganjar dan Prabowo, periode survei Litbang Kompas Januari 2023: Ridwan Kamil: 22,7% ; Sandiaga Salahuddin Uno: 7,3% ; Agus Harimurti Y. : 5,8 % ; Erick Thohir: 4,5% ; Tri Rismaharini: 4,3% ; Andika Perkasa: 2,3%. #BersamaJuara
+1628414348128587778 2023-02-22 15:20:09 +0000 &lt;putriikiraanna&gt; Selain itu, melejitnya sosok Ridwan Kamil sebagai capres alternatif juga sesuai dengan keberhasilannya mempertahankan elektabilitas pada posisi keempat yang terus membayangi tiga capres potensial teratas. #BersamaJuara Ridwan Kamil
+1628414345968521217 2023-02-22 15:20:09 +0000 &lt;putriikiraanna&gt; Ridwan Kamil disebut mendapatkan peralihan dukungan yang cukup besar dari pendukung Anies, Ganjar, maupun Prabowo dalam skema keterpilihannya sebagai figur alternatif. #BersamaJuara Ridwan Kamil
+1628414343728758787 2023-02-22 15:20:08 +0000 &lt;putriikiraanna&gt; Ridwan Kamil berada di posisi puncak sosok capres alternatif, meraih tingkat keterpilihan 22,7 persen dan terpaut jauh dibandingkan dengan tokoh capres alternatif lainnya. Posisi kedua ditempati Sandiaga dengan elektabilitas 7,3% dan Agus Harimurti Yudhoyono 5,8%. #BersamaJuara
+1628414341472223239 2023-02-22 15:20:08 +0000 &lt;putriikiraanna&gt; Beberapa nama yang muncul di antaranya Gubernur Jawa Barat Ridwan Kamil, Menparekraf Sandiaga Salahuddin Uno, Ketua Umum Partai Demokrat Agus Harimurti Yudhoyono, Menteri BUMN Erick Thohir hingga Menteri Sosial Tri Rismaharini. #BersamaJuara Ridwan Kamil
+1628414338968211456 2023-02-22 15:20:07 +0000 &lt;putriikiraanna&gt; Dalam survei Litbang Kompas pada periode Januari 2023, tiga tokoh menguasai papan elektabilitas calon presiden yaitu Ganjar Pranowo, Prabowo Subianto dan Anies Baswedan. Di sisi lain, muncul sederet figur lain yang dinilai layak didukung menjadi capres. #BersamaJuara Ridwan Kamil
+1628414336770383872 2023-02-22 15:20:07 +0000 &lt;putriikiraanna&gt; Tingkat kepercayaan survei menggunakan metode ini mencapai 95 persen dengan margin of error penelitian +- 2,83 persen dalam kondisi penarikan sampel acak sederhana. Meskipun demikian, kesalahan di luar pemilihan sampel dimungkinkan terjadi. #BersamaJuara Ridwan Kamil
+1628414332336996355 2023-02-22 15:20:05 +0000 &lt;putriikiraanna&gt; Litbang Kompas merilis hasil survei tentang calon presiden (capres) alternatif selain Anies Baswedan, Ganjar Pranowo dan Prabowo Subianto. Gubernur Jawa Barat Ridwan Kamil unggul dominan di survei figur capres alternatif. #BersamaJuara
+1628414329845596161 2023-02-22 15:20:05 +0000 &lt;putriikiraanna&gt; Survei Litbang Kompas: Ridwan Kamil Dominan di Figur Capres Alternatif  https://t.co/NbGSO6RqFK #BersamaJuara
+1628414294516985857 2023-02-22 15:19:56 +0000 &lt;BambangDewangga&gt; Pemilih Prabowo S. : Tidak tahu: 21,6% ; Ganjar Pranowo: 19,7% ; Anies B. : 19,3% ; Ridwan Kamil: 14,2% ; AHY : 8,4% ; Sandiaga S. Uno: 8,4% ; Tokoh lainnya: 4,6% ; Andika Perkasa: 2,8% ; Erick Thohir: 2,3% ; Tri Rismaharini: 1,8% ; Puan Maharani: 0,9%. #BersamaJuara
+1628414292247842817 2023-02-22 15:19:56 +0000 &lt;BambangDewangga&gt; Pemilih Ganjar Pranowo : Tidak Tahu: 30,2% ; Prabowo Subianto: 21,1% ; Ridwan Kamil: 14,8% ; Anies : 7,6% ; Tokoh lainnya: 7,2% ; Erick Thohir: 5,6% ; Tri Rismaharini: 4,9% ; Puan Maharani: 3% ; Sandiaga S. Uno: 2,3% ;  Andika Perkasa: 2% ; Agus Harimurti Y. : 1,3%. #BersamaJuara
+1628414289882087424 2023-02-22 15:19:55 +0000 &lt;BambangDewangga&gt; Sandiaga Salahuddin Uno: 8,2% ; Tokoh lainnya: 5,1% ; Andika Perkasa: 2,5% ; Puan Maharani: 2,5% ; Erick Thohir: 0,6% ; Tri Rismaharini: 0%. #BersamaJuara Ridwan Kamil
+1628414286635872256 2023-02-22 15:19:55 +0000 &lt;BambangDewangga&gt; Litbang Kompas juga merilis survei skema capres alternatif berdasarkan pemilih Anies, Ganjar dan Prabowo (Januari 2023). Pemilih Anies Baswedan : Tidak Tahu: 24,7% ; Prabowo Subianto: 17,7% ; Ridwan Kamil: 16,5% ; Ganjar Pranowo: 13,3% ; Agus Harimurti Y. : 8,9% #BersamaJuara
+1628414284316413952 2023-02-22 15:19:54 +0000 &lt;BambangDewangga&gt; Puan Maharani: 1,5% ; Airlangga Hartarto: 0,8% ; Mahfud Md: 0,7% ; Hary Tanoesoedibyo: 0,5% ; Khofifah Indar Parawansa: 0,5% ; Surya Paloh: 0,5% ; Basuki Tjahaja Purnama: 0,5% ; Lainnya: 2,2% ; Tidak Tahu/tidak jawab: 45,9%. #BersamaJuara Ridwan Kamil
+1628414282080882690 2023-02-22 15:19:53 +0000 &lt;BambangDewangga&gt; Berikut elektabilitas capres alternatif selain Anies, Ganjar dan Prabowo, periode survei Litbang Kompas Januari 2023: Ridwan Kamil: 22,7% ; Sandiaga Salahuddin Uno: 7,3% ; Agus Harimurti Y. : 5,8 % ; Erick Thohir: 4,5% ; Tri Rismaharini: 4,3% ; Andika Perkasa: 2,3%. #BersamaJuara
+1628414279845306369 2023-02-22 15:19:53 +0000 &lt;BambangDewangga&gt; Selain itu, melejitnya sosok Ridwan Kamil sebagai capres alternatif juga sesuai dengan keberhasilannya mempertahankan elektabilitas pada posisi keempat yang terus membayangi tiga capres potensial teratas. #BersamaJuara Ridwan Kamil
+1628414277609721857 2023-02-22 15:19:52 +0000 &lt;BambangDewangga&gt; Ridwan Kamil disebut mendapatkan peralihan dukungan yang cukup besar dari pendukung Anies, Ganjar, maupun Prabowo dalam skema keterpilihannya sebagai figur alternatif. #BersamaJuara Ridwan Kamil
+1628414275374153730 2023-02-22 15:19:52 +0000 &lt;BambangDewangga&gt; Ridwan Kamil berada di posisi puncak sosok capres alternatif, meraih tingkat keterpilihan 22,7 persen dan terpaut jauh dibandingkan dengan tokoh capres alternatif lainnya. Posisi kedua ditempati Sandiaga dengan elektabilitas 7,3% dan Agus Harimurti Yudhoyono 5,8%. #BersamaJuara
+1628414273100845056 2023-02-22 15:19:51 +0000 &lt;BambangDewangga&gt; Beberapa nama yang muncul di antaranya Gubernur Jawa Barat Ridwan Kamil, Menparekraf Sandiaga Salahuddin Uno, Ketua Umum Partai Demokrat Agus Harimurti Yudhoyono, Menteri BUMN Erick Thohir hingga Menteri Sosial Tri Rismaharini. #BersamaJuara Ridwan Kamil
+1628414270789783552 2023-02-22 15:19:51 +0000 &lt;BambangDewangga&gt; Dalam survei Litbang Kompas pada periode Januari 2023, tiga tokoh menguasai papan elektabilitas calon presiden yaitu Ganjar Pranowo, Prabowo Subianto dan Anies Baswedan. Di sisi lain, muncul sederet figur lain yang dinilai layak didukung menjadi capres. #BersamaJuara Ridwan Kamil
+1628414268378054656 2023-02-22 15:19:50 +0000 &lt;BambangDewangga&gt; Tingkat kepercayaan survei menggunakan metode ini mencapai 95 persen dengan margin of error penelitian +- 2,83 persen dalam kondisi penarikan sampel acak sederhana. Meskipun demikian, kesalahan di luar pemilihan sampel dimungkinkan terjadi. #BersamaJuara Ridwan Kamil
+1628414263848222728 2023-02-22 15:19:49 +0000 &lt;BambangDewangga&gt; Litbang Kompas merilis hasil survei tentang calon presiden (capres) alternatif selain Anies Baswedan, Ganjar Pranowo dan Prabowo Subianto. Gubernur Jawa Barat Ridwan Kamil unggul dominan di survei figur capres alternatif. #BersamaJuara
+1628414261470064640 2023-02-22 15:19:49 +0000 &lt;BambangDewangga&gt; Survei Litbang Kompas: Ridwan Kamil Dominan di Figur Capres Alternatif  https://t.co/Ri86vLFYfH #BersamaJuara
+1628414204737904641 2023-02-22 15:19:35 +0000 &lt;EnditaTata&gt; Pemilih Prabowo S. : Tidak tahu: 21,6% ; Ganjar Pranowo: 19,7% ; Anies B. : 19,3% ; Ridwan Kamil: 14,2% ; AHY : 8,4% ; Sandiaga S. Uno: 8,4% ; Tokoh lainnya: 4,6% ; Andika Perkasa: 2,8% ; Erick Thohir: 2,3% ; Tri Rismaharini: 1,8% ; Puan Maharani: 0,9%. #BersamaJuara
+1628414202372308993 2023-02-22 15:19:34 +0000 &lt;EnditaTata&gt; Pemilih Ganjar Pranowo : Tidak Tahu: 30,2% ; Prabowo Subianto: 21,1% ; Ridwan Kamil: 14,8% ; Anies : 7,6% ; Tokoh lainnya: 7,2% ; Erick Thohir: 5,6% ; Tri Rismaharini: 4,9% ; Puan Maharani: 3% ; Sandiaga S. Uno: 2,3% ;  Andika Perkasa: 2% ; Agus Harimurti Y. : 1,3%. #BersamaJuara
+1628414200229040129 2023-02-22 15:19:34 +0000 &lt;EnditaTata&gt; Sandiaga Salahuddin Uno: 8,2% ; Tokoh lainnya: 5,1% ; Andika Perkasa: 2,5% ; Puan Maharani: 2,5% ; Erick Thohir: 0,6% ; Tri Rismaharini: 0%. #BersamaJuara Ridwan Kamil
+1628414198098329600 2023-02-22 15:19:33 +0000 &lt;EnditaTata&gt; Litbang Kompas juga merilis survei skema capres alternatif berdasarkan pemilih Anies, Ganjar dan Prabowo (Januari 2023). Pemilih Anies Baswedan : Tidak Tahu: 24,7% ; Prabowo Subianto: 17,7% ; Ridwan Kamil: 16,5% ; Ganjar Pranowo: 13,3% ; Agus Harimurti Y. : 8,9% #BersamaJuara
+1628414195892109312 2023-02-22 15:19:33 +0000 &lt;EnditaTata&gt; Puan Maharani: 1,5% ; Airlangga Hartarto: 0,8% ; Mahfud Md: 0,7% ; Hary Tanoesoedibyo: 0,5% ; Khofifah Indar Parawansa: 0,5% ; Surya Paloh: 0,5% ; Basuki Tjahaja Purnama: 0,5% ; Lainnya: 2,2% ; Tidak Tahu/tidak jawab: 45,9%. #BersamaJuara Ridwan Kamil
+1628414193698508801 2023-02-22 15:19:32 +0000 &lt;EnditaTata&gt; Berikut elektabilitas capres alternatif selain Anies, Ganjar dan Prabowo, periode survei Litbang Kompas Januari 2023: Ridwan Kamil: 22,7% ; Sandiaga Salahuddin Uno: 7,3% ; Agus Harimurti Y. : 5,8 % ; Erick Thohir: 4,5% ; Tri Rismaharini: 4,3% ; Andika Perkasa: 2,3%. #BersamaJuara
+1628414191387418630 2023-02-22 15:19:32 +0000 &lt;EnditaTata&gt; Selain itu, melejitnya sosok Ridwan Kamil sebagai capres alternatif juga sesuai dengan keberhasilannya mempertahankan elektabilitas pada posisi keempat yang terus membayangi tiga capres potensial teratas. #BersamaJuara Ridwan Kamil
+1628414188942159874 2023-02-22 15:19:31 +0000 &lt;EnditaTata&gt; Ridwan Kamil disebut mendapatkan peralihan dukungan yang cukup besar dari pendukung Anies, Ganjar, maupun Prabowo dalam skema keterpilihannya sebagai figur alternatif. #BersamaJuara Ridwan Kamil
+1628414186555600896 2023-02-22 15:19:31 +0000 &lt;EnditaTata&gt; Ridwan Kamil berada di posisi puncak sosok capres alternatif, meraih tingkat keterpilihan 22,7 persen dan terpaut jauh dibandingkan dengan tokoh capres alternatif lainnya. Posisi kedua ditempati Sandiaga dengan elektabilitas 7,3% dan Agus Harimurti Yudhoyono 5,8%. #BersamaJuara
+1628414184039014400 2023-02-22 15:19:30 +0000 &lt;EnditaTata&gt; Beberapa nama yang muncul di antaranya Gubernur Jawa Barat Ridwan Kamil, Menparekraf Sandiaga Salahuddin Uno, Ketua Umum Partai Demokrat Agus Harimurti Yudhoyono, Menteri BUMN Erick Thohir hingga Menteri Sosial Tri Rismaharini. #BersamaJuara Ridwan Kamil
+1628414181769883650 2023-02-22 15:19:30 +0000 &lt;EnditaTata&gt; Dalam survei Litbang Kompas pada periode Januari 2023, tiga tokoh menguasai papan elektabilitas calon presiden yaitu Ganjar Pranowo, Prabowo Subianto dan Anies Baswedan. Di sisi lain, muncul sederet figur lain yang dinilai layak didukung menjadi capres. #BersamaJuara Ridwan Kamil
+1628414179509157894 2023-02-22 15:19:29 +0000 &lt;EnditaTata&gt; Tingkat kepercayaan survei menggunakan metode ini mencapai 95 persen dengan margin of error penelitian +- 2,83 persen dalam kondisi penarikan sampel acak sederhana. Meskipun demikian, kesalahan di luar pemilihan sampel dimungkinkan terjadi. #BersamaJuara Ridwan Kamil
+1628414174354350080 2023-02-22 15:19:28 +0000 &lt;EnditaTata&gt; Litbang Kompas merilis hasil survei tentang calon presiden (capres) alternatif selain Anies Baswedan, Ganjar Pranowo dan Prabowo Subianto. Gubernur Jawa Barat Ridwan Kamil unggul dominan di survei figur capres alternatif. #BersamaJuara
+1628414172030709761 2023-02-22 15:19:27 +0000 &lt;EnditaTata&gt; Survei Litbang Kompas: Ridwan Kamil Dominan di Figur Capres Alternatif  https://t.co/GYuR4Dgx8R #BersamaJuara
+1628413302320816128 2023-02-22 15:16:00 +0000 &lt;wyze_tw&gt; @ridwankamil Banjar banyak amoyna teu
+1628413297551900673 2023-02-22 15:15:59 +0000 &lt;bangkitNURO&gt; Pak @ridwankamil jalan Parung-Bogor penerangannya kurang. Kalo malem gelap bener terutama dari Bojongsari-Bogor. Mohon perhatiannya pak utk keselamatan dan keamanan pengguna jalan. Haturnuhun
+1628412651008307203 2023-02-22 15:13:25 +0000 &lt;petersabat74&gt; @ridwankamil Kampung ibu saya nih pa gubernur 😍
+1628411729293238273 2023-02-22 15:09:45 +0000 &lt;Politik_HariIni&gt; Jika tidak ada Sosok Ganjar, Prabowo, dan Anies di maka masyarakat akan menjagokan Ridwan Kamil sebagai Capres 2024 menurut Litbang Kompas.  https://t.co/jAnFMsQxrS
+[!] No more data! Scraping will stop now.
+found 0 deleted tweets in this search.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">column_names</span><span class="p">():</span>
+  <span class="k">return</span> <span class="n">twint</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span><span class="o">.</span><span class="n">columns</span>
+
+<span class="k">def</span> <span class="nf">twint_to_pd</span><span class="p">(</span><span class="n">columns</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">twint</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span><span class="p">[</span><span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">column_names</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;id&#39;, &#39;conversation_id&#39;, &#39;created_at&#39;, &#39;date&#39;, &#39;timezone&#39;, &#39;place&#39;,
+       &#39;tweet&#39;, &#39;language&#39;, &#39;hashtags&#39;, &#39;cashtags&#39;, &#39;user_id&#39;, &#39;user_id_str&#39;,
+       &#39;username&#39;, &#39;name&#39;, &#39;day&#39;, &#39;hour&#39;, &#39;link&#39;, &#39;urls&#39;, &#39;photos&#39;, &#39;video&#39;,
+       &#39;thumbnail&#39;, &#39;retweet&#39;, &#39;nlikes&#39;, &#39;nreplies&#39;, &#39;nretweets&#39;, &#39;quote_url&#39;,
+       &#39;search&#39;, &#39;near&#39;, &#39;geo&#39;, &#39;source&#39;, &#39;user_rt_id&#39;, &#39;user_rt&#39;,
+       &#39;retweet_id&#39;, &#39;reply_to&#39;, &#39;retweet_date&#39;, &#39;translate&#39;, &#39;trans_src&#39;,
+       &#39;trans_dest&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tweet_df</span> <span class="o">=</span> <span class="n">twint_to_pd</span><span class="p">([</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;tweet&#39;</span><span class="p">,</span> <span class="s1">&#39;place&#39;</span><span class="p">])</span>
+<span class="n">tweet_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-5703702f-3548-44d8-abc8-f1e7b40312ae">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>username</th>
+      <th>tweet</th>
+      <th>place</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>EnditaTata</td>
+      <td>Tol yang menghubungkan Kabupaten Batang dengan...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>EnditaTata</td>
+      <td>Tol Batang-Semarang harus menjalani proses lel...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>EnditaTata</td>
+      <td>Ternyata tol Getaci bukanlah satu-satunya proy...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>EnditaTata</td>
+      <td>Justru menurut Ridwan Kamil, langkah lelang ul...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>EnditaTata</td>
+      <td>Sementara itu, Staf Khusus III BUMN Arya Sinul...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>158</th>
+      <td>EnditaTata</td>
+      <td>Survei Litbang Kompas: Ridwan Kamil Dominan di...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>159</th>
+      <td>wyze_tw</td>
+      <td>@ridwankamil Banjar banyak amoyna teu</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>bangkitNURO</td>
+      <td>Pak @ridwankamil jalan Parung-Bogor penerangan...</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>petersabat74</td>
+      <td>@ridwankamil Kampung ibu saya nih pa gubernur 😍</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>Politik_HariIni</td>
+      <td>Jika tidak ada Sosok Ganjar, Prabowo, dan Anie...</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<p>163 rows × 3 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5703702f-3548-44d8-abc8-f1e7b40312ae')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-5703702f-3548-44d8-abc8-f1e7b40312ae button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-5703702f-3548-44d8-abc8-f1e7b40312ae');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tweet_df</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;crawling_twitter.csv&quot;</span><span class="p">)</span>
+<span class="n">show_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;crawling_twitter.csv&quot;</span><span class="p">)</span>
+<span class="n">show_csv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e80f240d-10ac-4c3c-92e0-fc2595e21d06">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>username</th>
+      <th>tweet</th>
+      <th>place</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>EnditaTata</td>
+      <td>Tol yang menghubungkan Kabupaten Batang dengan...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>EnditaTata</td>
+      <td>Tol Batang-Semarang harus menjalani proses lel...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>EnditaTata</td>
+      <td>Ternyata tol Getaci bukanlah satu-satunya proy...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>EnditaTata</td>
+      <td>Justru menurut Ridwan Kamil, langkah lelang ul...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>EnditaTata</td>
+      <td>Sementara itu, Staf Khusus III BUMN Arya Sinul...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>158</th>
+      <td>158</td>
+      <td>EnditaTata</td>
+      <td>Survei Litbang Kompas: Ridwan Kamil Dominan di...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>159</th>
+      <td>159</td>
+      <td>wyze_tw</td>
+      <td>@ridwankamil Banjar banyak amoyna teu</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>160</td>
+      <td>bangkitNURO</td>
+      <td>Pak @ridwankamil jalan Parung-Bogor penerangan...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>161</td>
+      <td>petersabat74</td>
+      <td>@ridwankamil Kampung ibu saya nih pa gubernur 😍</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>162</td>
+      <td>Politik_HariIni</td>
+      <td>Jika tidak ada Sosok Ganjar, Prabowo, dan Anie...</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>163 rows × 4 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e80f240d-10ac-4c3c-92e0-fc2595e21d06')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-e80f240d-10ac-4c3c-92e0-fc2595e21d06 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-e80f240d-10ac-4c3c-92e0-fc2595e21d06');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  </div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="crawl_pta.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Amelia Nur Septiyasari
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+<p class="copyright">
+
+    &copy; Copyright 2022.<br>
+
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
