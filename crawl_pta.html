@@ -3367,15 +3367,15 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;crawling_ptatrunojoyo.csv&quot;</span><span class="p">)</span>
-<span class="n">show_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;crawling_ptatrunojoyo.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/prosaindata/tugas/&#39;crawl_ptatrunojoyo.csv&#39;&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">show_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/prosaindata/tugas/&#39;crawl_ptatrunojoyo.csv&#39;&quot;</span><span class="p">)</span>
 <span class="n">show_csv</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6d50f97a-ab26-41ab-8005-aa012b98bcab">
+  <div id="df-bc2ac1bf-4d83-430b-817e-042eba4252d5">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3395,7 +3395,6 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>Title</th>
       <th>Penulis</th>
       <th>Abstract</th>
@@ -3404,35 +3403,30 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
       <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...</td>
       <td>A.Ubaidillah S.Kom</td>
       <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1</td>
       <td>APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...</td>
       <td>M. Basith Ardianto,</td>
       <td>Berjalannya koneksi jaringan komputer dengan l...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
       <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\r\n...</td>
       <td>Akhmad Suyandi, S.Kom</td>
       <td>Web server adalah sebuah perangkat lunak serve...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3</td>
       <td>SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...</td>
       <td>Heri Supriyanto</td>
       <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4</td>
       <td>SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...</td>
       <td>Septian Rahman Hakim</td>
       <td>Seiring perkembangan teknologi yang ada diduni...</td>
@@ -3442,48 +3436,42 @@ title="Print to PDF"
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
       <th>853</th>
-      <td>853</td>
       <td>PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...</td>
       <td>Rachmad Agung Pambudi</td>
       <td>Investasi saham selama ini memiliki resiko ker...</td>
     </tr>
     <tr>
       <th>854</th>
-      <td>854</td>
       <td>SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...</td>
       <td>Nadila Hidayanti</td>
       <td>Information Retrieval (IR) merupakan pengambil...</td>
     </tr>
     <tr>
       <th>855</th>
-      <td>855</td>
       <td>KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...</td>
       <td>Afni Sakinah</td>
       <td>Klasifikasi citra merupakan proses pengelompok...</td>
     </tr>
     <tr>
       <th>856</th>
-      <td>856</td>
       <td>IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...</td>
       <td>Friska Fatmawatiningrum</td>
       <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
     </tr>
     <tr>
       <th>857</th>
-      <td>857</td>
       <td>DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...</td>
       <td>Dian Wibowo</td>
       <td>Topik deteksi objek telah menarik perhatian ya...</td>
     </tr>
   </tbody>
 </table>
-<p>858 rows × 4 columns</p>
+<p>858 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6d50f97a-ab26-41ab-8005-aa012b98bcab')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-bc2ac1bf-4d83-430b-817e-042eba4252d5')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -3534,12 +3522,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6d50f97a-ab26-41ab-8005-aa012b98bcab button.colab-df-convert');
+          document.querySelector('#df-bc2ac1bf-4d83-430b-817e-042eba4252d5 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6d50f97a-ab26-41ab-8005-aa012b98bcab');
+          const element = document.querySelector('#df-bc2ac1bf-4d83-430b-817e-042eba4252d5');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});

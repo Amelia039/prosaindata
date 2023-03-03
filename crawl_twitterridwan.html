@@ -561,16 +561,16 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Collecting snscrape
   Downloading snscrape-0.5.0.20230113-py3-none-any.whl (69 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">69.2/69.2 KB</span> <span class=" -Color -Color-Red">2.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: requests[socks] in /usr/local/lib/python3.8/dist-packages (from snscrape) (2.25.1)
-Requirement already satisfied: filelock in /usr/local/lib/python3.8/dist-packages (from snscrape) (3.9.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">69.2/69.2 KB</span> <span class=" -Color -Color-Red">2.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from snscrape) (4.6.3)
 Requirement already satisfied: lxml in /usr/local/lib/python3.8/dist-packages (from snscrape) (4.9.2)
-Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from snscrape) (4.6.3)
+Requirement already satisfied: requests[socks] in /usr/local/lib/python3.8/dist-packages (from snscrape) (2.25.1)
 Requirement already satisfied: pytz in /usr/local/lib/python3.8/dist-packages (from snscrape) (2022.7.1)
-Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
-Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
+Requirement already satisfied: filelock in /usr/local/lib/python3.8/dist-packages (from snscrape) (3.9.0)
 Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (2.10)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (1.26.14)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (2022.12.7)
+Requirement already satisfied: chardet&lt;5,&gt;=3.0.2 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (4.0.0)
 Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /usr/local/lib/python3.8/dist-packages (from requests[socks]-&gt;snscrape) (1.7.1)
 Installing collected packages: snscrape
 Successfully installed snscrape-0.5.0.20230113
@@ -579,34 +579,34 @@ Requirement already satisfied: tqdm in /usr/local/lib/python3.8/dist-packages (4
 Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: ipywidgets in /usr/local/lib/python3.8/dist-packages (7.7.1)
 Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (5.7.1)
-Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (3.6.2)
-Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (5.3.4)
-Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (7.9.0)
-Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (0.2.0)
 Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (3.0.5)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (0.2.0)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (3.6.2)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (7.9.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.8/dist-packages (from ipywidgets) (5.3.4)
 Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.8/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.2)
 Requirement already satisfied: jupyter-client in /usr/local/lib/python3.8/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets) (6.1.12)
-Requirement already satisfied: decorator in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.4.2)
-Requirement already satisfied: pexpect in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.8.0)
-Requirement already satisfied: backcall in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.0)
-Requirement already satisfied: pygments in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (2.6.1)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (57.4.0)
 Collecting jedi&gt;=0.10
   Downloading jedi-0.18.2-py2.py3-none-any.whl (1.6 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">17.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: pickleshare in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.7.5)
-Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (57.4.0)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/1.6 MB</span> <span class=" -Color -Color-Red">20.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hRequirement already satisfied: pygments in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (2.6.1)
+Requirement already satisfied: decorator in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.4.2)
+Requirement already satisfied: backcall in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.0)
 Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (2.0.10)
+Requirement already satisfied: pexpect in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (4.8.0)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.8/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets) (0.7.5)
 Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.8/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.3.0)
 Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /usr/local/lib/python3.8/dist-packages (from jedi&gt;=0.10-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.8.3)
 Requirement already satisfied: terminado&gt;=0.8.3 in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.13.3)
-Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.2.1)
 Requirement already satisfied: jinja2 in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (3.1.2)
-Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.2.0)
 Requirement already satisfied: argon2-cffi in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.3.0)
-Requirement already satisfied: nbformat in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.7.3)
-Requirement already satisfied: nbconvert in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.5.4)
+Requirement already satisfied: jupyter-core&gt;=4.6.1 in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.2.0)
 Requirement already satisfied: Send2Trash&gt;=1.5.0 in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.8.0)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.5.4)
 Requirement already satisfied: prometheus-client in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.16.0)
+Requirement already satisfied: nbformat in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.7.3)
+Requirement already satisfied: pyzmq&gt;=17 in /usr/local/lib/python3.8/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.2.1)
 Requirement already satisfied: python-dateutil&gt;=2.1 in /usr/local/lib/python3.8/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets) (2.8.2)
 Requirement already satisfied: wcwidth in /usr/local/lib/python3.8/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (0.2.6)
 Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.8/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets) (1.15.0)
@@ -614,22 +614,22 @@ Requirement already satisfied: ptyprocess&gt;=0.5 in /usr/local/lib/python3.8/di
 Requirement already satisfied: platformdirs&gt;=2.5 in /usr/local/lib/python3.8/dist-packages (from jupyter-core&gt;=4.6.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (3.0.0)
 Requirement already satisfied: argon2-cffi-bindings in /usr/local/lib/python3.8/dist-packages (from argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (21.2.0)
 Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.8/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.1.2)
-Requirement already satisfied: packaging in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.0)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.8.4)
-Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.2)
-Requirement already satisfied: defusedxml in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.1)
-Requirement already satisfied: lxml in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.9.2)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.0)
-Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.2.2)
 Requirement already satisfied: tinycss2 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.2.1)
+Requirement already satisfied: packaging in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (23.0)
+Requirement already satisfied: lxml in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.9.2)
 Requirement already satisfied: bleach in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (6.0.0)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.6.3)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.2.2)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.8.4)
 Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.2)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.5.0)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.8/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.7.1)
 Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.8/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.16.3)
 Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.8/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (4.3.3)
-Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.8/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.19.3)
-Requirement already satisfied: importlib-resources&gt;=1.4.0 in /usr/local/lib/python3.8/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.12.0)
 Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.8/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (22.2.0)
+Requirement already satisfied: importlib-resources&gt;=1.4.0 in /usr/local/lib/python3.8/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (5.12.0)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.8/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.19.3)
 Requirement already satisfied: cffi&gt;=1.0.1 in /usr/local/lib/python3.8/dist-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (1.15.1)
 Requirement already satisfied: webencodings in /usr/local/lib/python3.8/dist-packages (from bleach-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (0.5.1)
 Requirement already satisfied: pycparser in /usr/local/lib/python3.8/dist-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets) (2.21)
@@ -670,8 +670,8 @@ Successfully installed jedi-0.18.2
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "fa6bf719767445629ca4beb2bd608630"}</script><div class="output text_html">
-  <div id="df-0840be42-a6bf-42dd-8fb5-6f4aa5c38485">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "9a1418895a2349a19e3737dc1f302535"}</script><div class="output text_html">
+  <div id="df-294cfc8e-ae48-4abe-87fc-9c7fd8698b81">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -699,33 +699,33 @@ Successfully installed jedi-0.18.2
   <tbody>
     <tr>
       <th>0</th>
-      <td>Verraagustian_</td>
-      <td>@panitia_embuh @ridwankamil Lagi mumet mikirin...</td>
-      <td></td>
+      <td>HitamMetaIik</td>
+      <td>@humasjabar @ridwankamil @ESDMJabar Siap si pa...</td>
+      <td>JAWA</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>panitia_embuh</td>
-      <td>pak RK.... mana ni pak RK??!\n\n@ridwankamil</td>
-      <td>Madiun, Indonesia</td>
+      <td>masnunano</td>
+      <td>@PaUuRuzhanul @ridwankamil @humasjabar Bagus p...</td>
+      <td></td>
     </tr>
     <tr>
       <th>2</th>
-      <td>adi_wly</td>
-      <td>@txtdaribandung @ridwankamil @mohmahfudmd</td>
-      <td>Bekasi</td>
+      <td>SidVanz</td>
+      <td>@humasjabar @ridwankamil @ESDMJabar Buat commu...</td>
+      <td></td>
     </tr>
     <tr>
       <th>3</th>
-      <td>pamatri23</td>
-      <td>@ahmdpnc14 @txtdaribandung @ridwankamil 😁🤭</td>
-      <td>Sukabumi, Indonesia</td>
+      <td>Ridwan_RN</td>
+      <td>@humasjabar @ridwankamil Kang rek puasa mah, p...</td>
+      <td>ÜT: -6.9790492,107.5776153</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>wawangu88797331</td>
-      <td>@txtdaribandung Kang @ridwankamil lebih baik f...</td>
-      <td></td>
+      <td>humasjabar</td>
+      <td>"Menjelang Ramadhan di Area #MasjidRayaAlJabba...</td>
+      <td>Bandung</td>
     </tr>
     <tr>
       <th>...</th>
@@ -735,39 +735,39 @@ Successfully installed jedi-0.18.2
     </tr>
     <tr>
       <th>497</th>
-      <td>Hendrikorachman</td>
-      <td>Wanita itu lebih byk masalah dibanding lelaki,...</td>
+      <td>robbyiborrn</td>
+      <td>@edwinbazz @humasjabar @zenibayusukma @ridwank...</td>
       <td></td>
     </tr>
     <tr>
       <th>498</th>
-      <td>aku_abdi_aing</td>
-      <td>@txtdaribandung Bandung juara 💪\nCc @ridwankam...</td>
-      <td>Kota Kembang</td>
+      <td>misuqie8</td>
+      <td>@RESTABES_BDG @txtdaribandung @GedebagePolsek ...</td>
+      <td>Bandung, Jawa Barat</td>
     </tr>
     <tr>
       <th>499</th>
-      <td>Diandeon9</td>
-      <td>@satriohendri Ganjar-Ridwan kamil \nSuara jaba...</td>
-      <td>Soreang</td>
+      <td>NiaRamasteril</td>
+      <td>MESJID AL JABAR DI TUTUP, BEGINI KATA RIDWAN K...</td>
+      <td></td>
     </tr>
     <tr>
       <th>500</th>
-      <td>wijayafirman</td>
-      <td>@txtdaribandung punteun pak @ridwankamil</td>
-      <td>Bandung</td>
+      <td>infocisels</td>
+      <td>@PRFMnews Niatnya bagus, yang layak Dan harus ...</td>
+      <td>South Cianjur  - West Java ID</td>
     </tr>
     <tr>
       <th>501</th>
-      <td>Herikunkun</td>
-      <td>Gubernur Jawa Barat @ridwankamil mengapresiasi...</td>
-      <td></td>
+      <td>longcatzz</td>
+      <td>@humasjabar @elkhoers_ID @ridwankamil @ESDMJab...</td>
+      <td>Somewhere in Nowhere</td>
     </tr>
   </tbody>
 </table>
 <p>502 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0840be42-a6bf-42dd-8fb5-6f4aa5c38485')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-294cfc8e-ae48-4abe-87fc-9c7fd8698b81')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -818,12 +818,12 @@ Successfully installed jedi-0.18.2
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0840be42-a6bf-42dd-8fb5-6f4aa5c38485 button.colab-df-convert');
+          document.querySelector('#df-294cfc8e-ae48-4abe-87fc-9c7fd8698b81 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0840be42-a6bf-42dd-8fb5-6f4aa5c38485');
+          const element = document.querySelector('#df-294cfc8e-ae48-4abe-87fc-9c7fd8698b81');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -846,21 +846,21 @@ Successfully installed jedi-0.18.2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">tweet_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data_twitter_ridwankamil.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">tweet_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/prosaindata/tugas/&#39;data_twitter_ridwankamil.csv&#39;&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">show_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data_twitter_ridwankamil.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">show_csv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/prosaindata/tugas/&#39;data_twitter_ridwankamil.csv&#39;&quot;</span><span class="p">)</span>
 <span class="n">show_csv</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3fd6b95d-c15a-45dc-a8bf-07ffce554e13">
+  <div id="df-9ee684f2-e1a8-4a4d-96b3-84a4ff626288">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -888,33 +888,33 @@ Successfully installed jedi-0.18.2
   <tbody>
     <tr>
       <th>0</th>
-      <td>Verraagustian_</td>
-      <td>@panitia_embuh @ridwankamil Lagi mumet mikirin...</td>
-      <td>NaN</td>
+      <td>HitamMetaIik</td>
+      <td>@humasjabar @ridwankamil @ESDMJabar Siap si pa...</td>
+      <td>JAWA</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>panitia_embuh</td>
-      <td>pak RK.... mana ni pak RK??!\n\n@ridwankamil</td>
-      <td>Madiun, Indonesia</td>
+      <td>masnunano</td>
+      <td>@PaUuRuzhanul @ridwankamil @humasjabar Bagus p...</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>adi_wly</td>
-      <td>@txtdaribandung @ridwankamil @mohmahfudmd</td>
-      <td>Bekasi</td>
+      <td>SidVanz</td>
+      <td>@humasjabar @ridwankamil @ESDMJabar Buat commu...</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>pamatri23</td>
-      <td>@ahmdpnc14 @txtdaribandung @ridwankamil 😁🤭</td>
-      <td>Sukabumi, Indonesia</td>
+      <td>Ridwan_RN</td>
+      <td>@humasjabar @ridwankamil Kang rek puasa mah, p...</td>
+      <td>ÜT: -6.9790492,107.5776153</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>wawangu88797331</td>
-      <td>@txtdaribandung Kang @ridwankamil lebih baik f...</td>
-      <td>NaN</td>
+      <td>humasjabar</td>
+      <td>"Menjelang Ramadhan di Area #MasjidRayaAlJabba...</td>
+      <td>Bandung</td>
     </tr>
     <tr>
       <th>...</th>
@@ -924,39 +924,39 @@ Successfully installed jedi-0.18.2
     </tr>
     <tr>
       <th>497</th>
-      <td>Hendrikorachman</td>
-      <td>Wanita itu lebih byk masalah dibanding lelaki,...</td>
+      <td>robbyiborrn</td>
+      <td>@edwinbazz @humasjabar @zenibayusukma @ridwank...</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>498</th>
-      <td>aku_abdi_aing</td>
-      <td>@txtdaribandung Bandung juara 💪\nCc @ridwankam...</td>
-      <td>Kota Kembang</td>
+      <td>misuqie8</td>
+      <td>@RESTABES_BDG @txtdaribandung @GedebagePolsek ...</td>
+      <td>Bandung, Jawa Barat</td>
     </tr>
     <tr>
       <th>499</th>
-      <td>Diandeon9</td>
-      <td>@satriohendri Ganjar-Ridwan kamil \nSuara jaba...</td>
-      <td>Soreang</td>
+      <td>NiaRamasteril</td>
+      <td>MESJID AL JABAR DI TUTUP, BEGINI KATA RIDWAN K...</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>500</th>
-      <td>wijayafirman</td>
-      <td>@txtdaribandung punteun pak @ridwankamil</td>
-      <td>Bandung</td>
+      <td>infocisels</td>
+      <td>@PRFMnews Niatnya bagus, yang layak Dan harus ...</td>
+      <td>South Cianjur  - West Java ID</td>
     </tr>
     <tr>
       <th>501</th>
-      <td>Herikunkun</td>
-      <td>Gubernur Jawa Barat @ridwankamil mengapresiasi...</td>
-      <td>NaN</td>
+      <td>longcatzz</td>
+      <td>@humasjabar @elkhoers_ID @ridwankamil @ESDMJab...</td>
+      <td>Somewhere in Nowhere</td>
     </tr>
   </tbody>
 </table>
 <p>502 rows × 3 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3fd6b95d-c15a-45dc-a8bf-07ffce554e13')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9ee684f2-e1a8-4a4d-96b3-84a4ff626288')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -1007,12 +1007,12 @@ Successfully installed jedi-0.18.2
 
       <script>
         const buttonEl =
-          document.querySelector('#df-3fd6b95d-c15a-45dc-a8bf-07ffce554e13 button.colab-df-convert');
+          document.querySelector('#df-9ee684f2-e1a8-4a4d-96b3-84a4ff626288 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3fd6b95d-c15a-45dc-a8bf-07ffce554e13');
+          const element = document.querySelector('#df-9ee684f2-e1a8-4a4d-96b3-84a4ff626288');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
